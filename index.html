@@ -1,9 +1,20 @@
+<!DOCTYPE html>
 <html>
 
 <head>
 	<title> Smart Hire Pro </title>
 
-  	<link rel="stylesheet" type='text.css' href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto|Varela+Round" rel="stylesheet">
+
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>	
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -20,41 +31,20 @@
 
 
 <div id="header">
-	<!--<nav>
+	<nav>
 		<ul>
-			<img src="http://marketing.technologo.com/sites/default/files/pictures/vSample.png">
-			<li>CONTACT</li>
-			<li>ABOUT</li>
-			<li>HOME</li>
+			<img src="assets/logo.png">
+			<li id='contact'><b>CONTACT US</b></li>
+			<li id='about'><b>ABOUT US</b> </li>
+			<li id='features'><b>FEATURES</b></li>
 		</ul>
-	</nav>-->
-
-	<div class="navbar">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="sr-only">Toggle Navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#"><img src="assets/logo.png"></a>
-			</div>
-			<div class="collapse navbar-collapse">
-				<ul class="nav navbar-nav pull-right">
-					<li class="active"><%= link_to "Features", root_path(:anchor => "feature-box") %></li>
-					<li><%= link_to "About Us", root_path(:anchor => "footer") %></li>
-					<li><%= link_to "Contact Us", root_path(:anchor => "middle-box") %></li>
-				</ul>
-			</div> 
-		</div>
-	</div>
+	</nav>
 
 	<div id="header-text">
 		<h1> Smart Hire Pro</h>
 		<h3> Hiring made easy </h3>
 		<div id="header-text-2">
-			<p> <span style="color:#d4d4d4">Smart Recruiting Software </span> for business and teams craving to <span style="color:#d4d4d4">  Hire Best Talents </span> </p>
+			<p>Smart Recruiting Software for business <br> and teams craving to Hire Best Talents </p>
 			<text style=color:white> Leave us your email and get invited once we're live. </text>
 			<div id="email-form">
 				<form action="https://smarthirepro.us17.list-manage.com/subscribe/post?u=575568cfdf807a68dcc29091a&amp;id=d7131b073e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -73,11 +63,13 @@
 <div id='content' >
 	<div class="intro-box">
 		<h1 class="secondary-blue"> Why Choose Us ? </h1>
-		<p> We are an <b> Online Recruitment Platform </b> committed to help Businesses and Teams wanting to <b> Level Up </b> their <b> Hiring Process </b> by easing the workload of recruiters. </p>
+		<p> We are an <b> Online Recruitment Platform </b> committed to help Businesses <br> and Teams wanting to <b> Level Up </b> their <b> Hiring Process </b> by easing the <br>workload of recruiters. </p>
 	</div>	
 
+	<div id='features'></div>
+
 	<div class="feature-box" id="feature-box">
-		<img class="feature-image" src="/assets/user_interface.png">
+		<img class="feature-image" src="assets/user_interface.png">
 		<div class="feature-description">
 			<h2 class="feature-title secondary-blue"> Marvellous User Experience </h2>
 			<p class="feature-detail">We offer a very <b> Beautiful and Easy </b> to use Interface that purveys the best user experience. We make sure you get <b> More Value </b> with <b> Less Effort </b> using our Fast, Clean and Easy navigation. </p>
@@ -99,7 +91,7 @@
 	</div>		
 
 	<div class="feature-box">
-		<img class="feature-image" src="/assets/job_titles.png">
+		<img class="feature-image" src="assets/job_titles.png">
 		<div class="feature-description">
 			<h2 class="feature-title secondary-blue"> Job Titles according to your needs </h2>
 			<p class="feature-detail"> <b> Create </b> any number of <b> Job Titles </b> that categorizes your applicants. We make sure all your <b> Applicants </b> regardless of their job titles have to go through all the phases of the <b> Selection Process </b>. </p>
@@ -139,14 +131,7 @@
 
 </div>
 
-<script>
-	window.sr = ScrollReveal({});
-	sr.reveal('.feature-box', { duration: 2000 });
-	sr.reveal('.middle-box-wrapper', { duration: 2000 });	
-	sr.reveal('#header-text', { duration: 1000 });
-	sr.reveal('.intro-box', { duration: 1000 });	
-</script>
-
 </body>
 
 </html>
+
