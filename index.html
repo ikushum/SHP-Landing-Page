@@ -34,14 +34,24 @@
 
 
 <div id="header">
-	<nav>
-		<ul>
-			<img src="assets/logo.png">
-			<li id='contact'><b>CONTACT US</b></li>
-			<li id='about'><b>ABOUT US</b> </li>
-			<li id='features'><b>FEATURES</b></li>
-		</ul>
-	</nav>
+	<div class="navbar">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle Navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html"><img src="assets/logo.png"></a>
+			</div>
+			<div class="collapse navbar-collapse no-padding">
+				<ul class="nav navbar-nav pull-right">
+					<li id="features">FEATURES</li>
+				</ul>
+			</div> 
+		</div>
+	</div>
 
 	<div id="header-text">
 		<h1> Smart Hire Pro</h>
@@ -143,6 +153,4 @@
 <script src='javascript.js'></script>
 
 </body>
-
 </html>
-
