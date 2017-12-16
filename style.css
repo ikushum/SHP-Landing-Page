@@ -132,7 +132,6 @@ nav section{
 }
 
 #header-text #header-text-2 {
-	background: rgba(0,0,0,0.5);
 	width: 50%;
 	padding: 20px 20px;
 	margin: 0 auto;
@@ -141,10 +140,17 @@ nav section{
 
 #header-text #email-form {
 	margin-top: 10px;
+	padding: 15px;
+	background-color: rgba(0, 0, 0, 0.65);
+}
+
+#header-text #email-form form {
+	margin-bottom: 12px;
 }
 
 #header-text #email-form #mce-EMAIL {
 	color: #FFF;
+	float: left;
 	width: 70%;
 	padding: 0px 20px;
 	background: rgba(255, 255, 255, 0.3);	
@@ -152,25 +158,20 @@ nav section{
 	height: 45px;
 	vertical-align: top;
 	display: inline-block;
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;			  	
 }
 
 #header-text #email-form #mc-embedded-subscribe {
 	background-color:#08689C ;
+	padding: 0;
 	width: 30%;
 	color: #FFF;
 	border: none;
-	padding: 14px;
 	height: 45px;
 	display: inline-block;
-	margin: 0 0 0 -4px;
 	vertical-align: top;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;	
   -webkit-transition: .5s;
   -moz-transition: .5s;
-  transition: .5s;			  					  	
+  transition: .5s;
 }
 
 #header-text #email-form #mc-embedded-subscribe:hover {
@@ -417,8 +418,12 @@ text.footer {
 	text.footer {
 		line-height: 30px;
 	}
-	
+}
 
+@media screen and (max-width: 803px) {
+	#header-text #header-text-2 {
+		padding: 20px 0;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -448,6 +453,12 @@ text.footer {
 	#header .navbar .navbar-collapse.collapse.in ul.nav.navbar-nav.pull-right {
 		margin-bottom: 0;
 		float: none !important;
+	}
+}
+
+@media screen and (max-width: 602px) {
+	#header-text #header-text-2 {
+		width: 65% !important;
 	}
 }
 
@@ -494,43 +505,33 @@ text.footer {
 		font-size: 3rem;
 	}
 
-	#header #header-text {
-		top: 15%;
-	}
-
 	#content .intro-box p {
 		width:80%;
 		font-size:15px;	
 
 	}
 
+	#header-text #header-text-2 {
+		width: 90% !important;
+	}
+
 	#header-text #header-text-2 p {
 		margin: 0 0 15px;
+	}
+
+	#header-text #header-text-2 #email-form form {
+		margin-bottom: 0;
 	}
 
 	#header-text #header-text-2 #email-form #mce-EMAIL,
 	#header-text #header-text-2 #email-form #mc-embedded-subscribe,
 	#content .middle-box .middle-box-wrapper #email-form #mce-EMAIL,
 	#content .middle-box .middle-box-wrapper #email-form #mc-embedded-subscribe {
-		margin: 0 0 10px;
+		margin-bottom: 12px;
 		width: 100%;
 		border-radius: 0;
 		border: none;
 		text-align: center;
-	}
-
-	#header-text #header-text-2 #email-form #mce-EMAIL,
-	#content .middle-box .middle-box-wrapper #email-form #mce-EMAIL {
-		border-top-left-radius: 10px;
-		border-top-right-radius: 10px;
-	}
-
-
-	#header-text #header-text-2 #email-form #mc-embedded-subscribe,
-	#content .middle-box .middle-box-wrapper #email-form #mc-embedded-subscribe {
-		margin: 0;
-		border-bottom-left-radius: 10px;
-		border-bottom-right-radius: 10px;
 	}
 }
 
@@ -557,16 +558,11 @@ input:invalid:active {
 .error {
   width  : 100%;
   padding: 0;
- 
-  font-size: 80%;
   color: white;
   background-color: #900;
-  border-radius: 0 0 5px 5px;
- 
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 .error.active {
   padding: 0.3em;
+  margin-bottom: 12px;
 }
