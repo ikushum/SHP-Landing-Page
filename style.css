@@ -298,7 +298,7 @@ body {
 }
 
 #footer a {
-	text-decoration: none;
+	text-decoration: underline;
 	color: #FFF;
 	font-weight: 600;
 }

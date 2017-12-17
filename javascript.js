@@ -51,3 +51,11 @@ form.addEventListener("submit", function (event) {
     event.preventDefault();
   }
 }, false);
+
+//For page redirection after subscription
+var elem = document.getElementById('subscription_message'); 
+var urlParams = new URLSearchParams(window.location.search);
+
+if (urlParams.get("status") != "successful_subscription") {
+  elem.style.display = "none";    
+}
