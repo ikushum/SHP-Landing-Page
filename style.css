@@ -1,12 +1,34 @@
+:root {
+	--primary-blue: #08689C;
+	--secondary-blue: #06537c;
+	--tertiary-blue: #3986af;
+}
+
+body {
+	margin: 0 auto;
+	padding: 0;
+}
+
 .secondary-blue {
 	color: #08689C;
 }
+
+.no-margin {
+	margin: 0 !important;
+}
+
+.no-padding {
+	padding: 0 !important;
+}
+
+
 
 #header {
 	position: absolute;
 	color: #FFF;
 	margin: 0;
 	padding: 0;
+	max-width: 2560px;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
@@ -25,84 +47,73 @@
 	font-family: 'Raleway', sans-serif;
 }
 
-
-nav img{
-	display:inline-block;
-	float:left;
-	padding:10px 30px;
-	height:70px;
+.navbar {
+	width: 100% !important;
+	position: absolute !important;
+	padding: 15px 0;
 }
 
-nav ul{
-  position:absolute;
-  z-index:1000;
-  width:100%;
-  color:white;
+.navbar .navbar-header a.navbar-brand {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.navbar .navbar-header a.navbar-brand img {
+	height:100%;
+}
+
+.navbar .navbar-header button.navbar-toggle span.icon-bar {
+	background-color: #FFF; 
+}
+
+.navbar ul {
   list-style:none;
   -webkit-transition:.5s;
   -moz-transition:.5s;
   transition:.5s;
-  padding:0;
 }
 
-nav ul li{
-  display:inline-block;
-  padding:20px 30px;
-  float:right;
-  cursor: pointer;
-  -webkit-transition: .5s;
-  -moz-transition: .5s;
-  transition: .5s;  
-}
-
-nav ul li:hover{
-	color: #36a6e3;
-}
-
-nav section{
-  padding:100px 50px 50px;
-  line-height:140%;
-}	
-
-
-
-		
-.navbar.container-fluid .navbar-header a.navbar-brand {
-	padding: 0;
-}
-
-.navbar.container-fluid .navbar-header a.navbar-brand img {
-	display: inline-block;
-	float: left;
-	padding: 0 30px;
-	height: 100%;
-}
-
-.navbar.container-fluid .navbar-header button.navbar-toggle {
-	span.icon-bar {
-		background-color: #FFF; 
-	}
-}
-		
-
-		 
-.container-fluid .collapse.navbar-collapse ul.nav.navbar-nav.pull-right li a {
+.navbar ul li {
 	font-size: 1.15em;
 	font-weight: 900;
+	padding: 15px;
+  display:inline-block;
+  cursor: pointer;
 }
 
-.container-fluid .collapse.navbar-collapse ul.nav.navbar-nav.pull-right li a:hover {
-	background: none;
-	color: $primary-red;
-	-webkit-transition: .5s;
-  -moz-transition: .5s;
-  transition: .5s;
+.navbar ul li:hover {
+	background-color: var(--secondary-blue);
+	-webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+	.navbar {
+		padding: 0;
+		background-color: var(--secondary-blue);
+	}
+
+	.navbar .navbar-header {
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+
+	.navbar .navbar-collapse ul.navbar-nav {
+		margin: 0;
+		width: 100%;
+	}
+
+	.navbar .navbar-collapse ul.navbar-nav li {
+		width: 100%;
+		background-color: var(--primary-blue);
+	}
 }
 		
 
 #header-text {
 	position: relative;
-	top: 25%;
+	top: 35%;
 	transform: translateY(-25%);
 }
 
@@ -148,7 +159,8 @@ nav section{
 	margin-bottom: 12px;
 }
 
-#header-text #email-form #mce-EMAIL {
+#header-text #email-form #mce-EMAIL,
+.middle-box .middle-box-wrapper #email-form #mce-EMAIL {
 	color: #FFF;
 	float: left;
 	width: 70%;
@@ -160,8 +172,9 @@ nav section{
 	display: inline-block;
 }
 
-#header-text #email-form #mc-embedded-subscribe {
-	background-color:#08689C ;
+#header-text #email-form #mc-embedded-subscribe,
+.middle-box .middle-box-wrapper #email-form #mc-embedded-subscribe {
+	background-color: var(--secondary-blue);
 	padding: 0;
 	width: 30%;
 	color: #FFF;
@@ -174,12 +187,14 @@ nav section{
   transition: .5s;
 }
 
-#header-text #email-form #mc-embedded-subscribe:hover {
-	background-color: #137AB2;
+#header-text #email-form #mc-embedded-subscribe:hover,
+.middle-box .middle-box-wrapper #email-form #mc-embedded-subscribe:hover {
+	background-color: var(--tertiary-blue);
 }
 		
 
 #content {
+	max-width: 2560px;
 	position: absolute;
 	top: 100%;
 }
@@ -236,8 +251,6 @@ nav section{
 	text-align: center;
 	font-size: 20px;
 }
-		
-	
 
 .parallex-window {
 	background: transparent;
@@ -275,66 +288,34 @@ nav section{
 
 .middle-box .middle-box-wrapper #email-form #mce-EMAIL {
 	color: black;
-	width: 70%;
-	padding: 0px 20px;
 	background-color: #FFF;	
-	border: none;	
-	height: 45px;
-	vertical-align: top;
-	display: inline-block;
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;			  	
 }
-
-.middle-box .middle-box-wrapper #email-form #mc-embedded-subscribe {
-	background-color: #2d2d2d;
-	width: 30%;
-	color: #FFF;
-	border: none;
-	padding: 14px;
-	height: 45px;
-	display: inline-block;
-	margin: 0 0 0 -4px;
-	vertical-align: top;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;	
-	-webkit-transition: .5s;
-	-moz-transition: .5s;
-	transition: .5s;			  					  	
-}
-
-.middle-box .middle-box-wrapper #email-form #mc-embedded-subscribe:hover {
-	background-color: #3a3a3a;			
-}
-		
-	
+			
 #footer {
 	background-color: #2d2d2d;
-	padding: 40px;
-	margin-top: 90px;
-}
-
-text.footer {
-	padding: 0px;
-	display: table;
-	margin: 0px auto;
-	text-align: center;
-	font-size: 15px;
+	padding: 15px;
 	color: #FFF;
-	line-height: 3px;
-	border: none;
-	font-weight: normal;
 }
 
+#footer a {
+	text-decoration: none;
+	color: #FFF;
+	font-weight: 600;
+}
+
+#footer a:hover {
+	color: var(--tertiary-blue);
+	transition: 0.5s;
+}
 
 
 @media screen and (max-width: 950px) {
-
 	br{display:none;}
 
 	#header #header-text {
 		transform: translateY(-25%);
 	}
+
 	#header #header-text h1 {
 		font-size: 40px;	
 		font-weight: bold;	
@@ -410,14 +391,6 @@ text.footer {
 		margin-top: 0;
 		font-size: 2.3rem;
 	}
-
-	#footer {
-		margin-top: 90px;
-	}
-
-	text.footer {
-		line-height: 30px;
-	}
 }
 
 @media screen and (max-width: 803px) {
@@ -427,9 +400,6 @@ text.footer {
 }
 
 @media screen and (max-width: 768px) {
-
-	#header nav{display:none;}
-
 	#header-text #header-text-2 {
 		width: 60% !important;
 	}
@@ -447,14 +417,13 @@ text.footer {
 		width: 80%;
 	}
 
-}
-
-@media screen and (max-width: 767px) {
-	#header .navbar .navbar-collapse.collapse.in ul.nav.navbar-nav.pull-right {
-		margin-bottom: 0;
-		float: none !important;
+	#footer text.col-md-6.col-sm-6.col-xs-12.text-left,
+	#footer text.col-md-6.col-sm-6.col-xs-12.text-right {
+		text-align: center !important;
+		line-height: 25px;
 	}
 }
+
 
 @media screen and (max-width: 602px) {
 	#header-text #header-text-2 {
@@ -553,6 +522,13 @@ input:invalid:active {
 	background-color: rgba(153, 0, 0, 0.1) !important;
   border: 1px solid #900 !important;
 }
+
+#content .middle-box .middle-box-wrapper #email-form input#mce-EMAIL:focus:invalid,
+#content .middle-box .middle-box-wrapper #email-form input#mce-EMAIL:invalid:active {
+	background-color: #ffcbcb !important;
+}
+
+
 
 /* This is the style of our error messages */
 .error {
