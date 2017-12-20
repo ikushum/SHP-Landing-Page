@@ -88,7 +88,7 @@ body {
 
 #header-text {
 	position: relative;
-	top: 40%;
+	top: 35%;
 	transform: translateY(-25%);
 }
 
@@ -283,7 +283,7 @@ body {
 }
 
 #footer a {
-	text-decoration: none;
+	text-decoration: underline;
 	color: #FFF;
 	font-weight: 600;
 }
@@ -374,10 +374,6 @@ body {
 	}
 }
 
-@media screen and (max-width: 769px) {
-
-}
-
 @media screen and (max-width: 768px) {
 	.navbar {
 		padding: 0;
@@ -400,7 +396,7 @@ body {
 	}
 
 	#header-text {
-		top: 45%;
+		top: 40%;
 	}
 
 	#header-text #header-text-2 {
@@ -503,6 +499,11 @@ body {
 		border-radius: 0;
 		border: none;
 		text-align: center;
+	}
+
+	#header-text #header-text-2 #email-form #mc-embedded-subscribe,
+	#content .middle-box .middle-box-wrapper #email-form #mc-embedded-subscribe {
+		margin-bottom: 0 !important;
 	}
 }
 
