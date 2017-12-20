@@ -18,6 +18,6 @@ $("li#features").click(function() {
 //var elem = document.getElementById('subscription_message'); 
 var urlParams = new URLSearchParams(window.location.search);
 
-if (urlParams.get("status") != "successful_subscription") {
+if (urlParams.get("status") == "successful_subscription") {
   $('#subscription_message').modal('show');
 }
