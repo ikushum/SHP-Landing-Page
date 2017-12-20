@@ -17,7 +17,8 @@ $("li#features").click(function() {
 //For successful subscription message after page redirection from mailchimp
 //var elem = document.getElementById('subscription_message'); 
 var urlParams = new URLSearchParams(window.location.search);
+var encodedParam = window.btoa('successful_subscription');
 
-if (urlParams.get("status") == "successful_subscription") {
+if (urlParams.get("q") == encodedParam) {
   $('#subscription_message').modal('show');
 }
